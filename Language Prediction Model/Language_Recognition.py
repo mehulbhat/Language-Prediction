@@ -216,5 +216,12 @@ plot_confusion_matrix(y_val, predictions, ['sk', 'cs', 'en'])
 
 f1_score(y_val, predictions, average='weighted')
 
+#Use this function for Predicting language from your own data
+text = 'okrem iného ako durič na brlohárenie'
+text = preprocess_function(text)
+text = [split_into_subwords_function(text)]
+text_vectorized = vectorizer.transform(text)
+model.predict(text_vectorized)
+
 joblib.dump(naive_classifier, 'Data/Models/final_model.joblib')
 joblib.dump(vectorizer, 'Data/Vectorizers/final_model.joblib')
