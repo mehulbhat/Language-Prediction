@@ -1,4 +1,4 @@
-At the end of program the collowing lines are written:
+At the end of program the following lines are written:
 
     text = 'okrem iného ako durič na brlohárenie'
     text = preprocess_function(text)
